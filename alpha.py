@@ -1,5 +1,4 @@
-#API KEY: 38ZWG370RS8AKVJ6
-
+#need to get rid of key
 from alpha_vantage.timeseries import TimeSeries
 import time
 
