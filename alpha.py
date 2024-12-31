@@ -2,8 +2,11 @@
 from alpha_vantage.timeseries import TimeSeries
 import time
 
+with open('key.txt', 'r') as key_file:
+    api_key = key_file.read().strip()
+
 # Initialize TimeSeries with your API key
-ts = TimeSeries(key='38ZWG370RS8AKVJ6', output_format='pandas')
+ts = TimeSeries(key=api_key, output_format='pandas')
 
 # Function to fetch data with error handling
 def fetch_data(symbol):
