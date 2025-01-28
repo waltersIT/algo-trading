@@ -2,14 +2,6 @@ import randomForest as rf
 import finance_data as fd
 import linearRegression as lr
 
-
-
-
-
-
-
-
-
 if __name__ == "__main__":
     chip_companies = ['NVDA']
 
