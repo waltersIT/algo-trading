@@ -1,3 +1,4 @@
+#plots penny stocks with linear regression
 import yfinance as yf
 import pandas as pd
 import matplotlib.pyplot as plt
