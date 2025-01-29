@@ -60,9 +60,35 @@ class LinearRegressionTrading:
         plt.grid()
         plt.show()
 
+    def get_stock_slope(self, chip_companies):
+        """Calculates and returns the slope of the regression line for each stock."""
+        slopes = {}
+        for ticker in chip_companies:
+            data = self.finance_data.fetch_financial_data(ticker)
+            if data is not None and not data.empty:
+                data = data.reset_index()
+                data['Timestamp'] = data['Date'].map(pd.Timestamp.timestamp)
+                X = data['Timestamp'].values.reshape(-1, 1)
+                y = data['Close'].values
+
+                model = LinearRegression()
+                model.fit(X, y)
+
+                slopes[ticker] = model.coef_[0]  # Slope of the regression line
+        #turns the dict value into a float        
+        data_float = {key: float(value) for key, value in slopes.items()}
+        for i in data_float.values():
+            #this is done fucking awfully but i want to go to bed so just make it an array and
+            #deal w it in datapooling later
+            float_value = i
+        #print(float_value)
+        return float_value
+
+"""
 if __name__ == "__main__":
     linear = LinearRegressionTrading()
     chip_companies = ['NVDA']
     linear.plot_stock_progress(chip_companies)
     linear.plot_stock_with_regression(chip_companies)
-
+    #print(linear.get_stock_slope(chip_companies))
+"""

@@ -9,7 +9,6 @@ class News:
         with open('key.txt', 'r') as file:
             API_KEY = file.read().strip()
 
-        API_KEY = ""#change to you api key
         headlines = []
         # Initialize
         newsapi = NewsApiClient(api_key=API_KEY)
