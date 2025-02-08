@@ -5,7 +5,7 @@ import newsTrading as nt
 
 class DataPooling:
     def get_RFC_predictions():
-        chip_companies = ['NVDA']
+        chip_companies = ['META']
         randfc = rfc.RFC(chip_companies)
         
         data = randfc.prepare_data()
@@ -19,7 +19,7 @@ class DataPooling:
 
     def get_linear_regression():
         linear = lr.LinearRegressionTrading()
-        chip_companies = ['NVDA']
+        chip_companies = ['META']
         #linear.plot_stock_progress(chip_companies)
         #linear.plot_stock_with_regression(chip_companies)
         slope = linear.get_stock_slope(chip_companies)
