@@ -1,4 +1,4 @@
-# News-Based Stock Trading Model
+# Stock Trading Model
 
 ## Overview
 This project integrates financial data, news sentiment analysis, and machine learning models to predict stock trading signals. It employs Random Forest Classification, linear regression analysis, and sentiment analysis to evaluate stock trends and generate buy/sell recommendations.
