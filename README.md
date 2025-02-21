@@ -1,5 +1,5 @@
 # Stock Trading Model
-Due to an issue with the y finance library the project is currently under developement, but will be functioning shortly
+Due to an issue with the yfinance library the project is currently under developement, but will be functioning shortly
 ## Overview
 This project integrates financial data, news sentiment analysis, and machine learning models to predict stock trading signals. It employs Random Forest Classification, linear regression analysis, and sentiment analysis to evaluate stock trends and generate buy/sell recommendations.
 
